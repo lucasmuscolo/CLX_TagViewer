@@ -1,0 +1,2 @@
+cd C:\AtiiSoftware\Flowserve_PH_Lab\out\artifacts\Flowserve_PH_Lab_jar
+java -jar Flowserve_PH_Lab.jar
