@@ -74,18 +74,20 @@ public class GUI {
         menu.add(m2);
         menu.add(m3);
         menu.add(m4);
-        int btnX = perLar(screenWidth,35);
-        int btnY = perLar(screenWidth,2);
+        int btnX, btnY ;
 
+        JLabel imagenAtii;
         //Imagen de ATII
         BufferedImage atiiLogo =  null;
-        try {
-            atiiLogo= ImageIO.read(new File("C:/AtiiSoftware/ATII.JPG"));
-        } catch (IOException e) {
-            System.out.println("Problema con la imagen");
-        }
-        JLabel imagenAtii = new JLabel(new ImageIcon(atiiLogo));
-        imagenAtii.setBounds(btnX+465,btnY,150,60);
+        try {atiiLogo= ImageIO.read(new File("C:/AtiiSoftware/AT.JPG"));
+            imagenAtii = new JLabel(new ImageIcon(atiiLogo));
+            btnX = perLar(screenWidth,35);
+            btnY = perLar(screenWidth,2);
+            imagenAtii.setBounds(btnX+465,btnY,150,60);}
+        catch (IOException e) { System.out.println("Problema con la imagen");
+            imagenAtii = new JLabel();
+            btnX = perLar(screenWidth,50);
+            btnY = perLar(screenWidth,2);}
 
         //Boton de carga manual
         JButton cargaDatos = new JButton("Carga Manual");
